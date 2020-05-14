@@ -18,31 +18,37 @@ function preload() {
 }
 
 function setup(){
-    var canvas = createCanvas(1200,600);
+    var canvas = createCanvas(1800,600);
     engine = Engine.create();
     world = engine.world;
 
     player = new Player(300,300,80,80);
 
-    ground = new Ground(600,590,1200,150);
+    ground = new Ground(900,590,1800,150);
     stage = new Ground(150,415,300,200);
 
-    slab1 = new Slab(540,315,40,150);
+    slab1 = new Slab(540,315,60,150);
     book1 = new Book(650,400,100,130);
     book2 = new Book(910,400,100,130);
-    slab2 = new Slab(1020,315,40,150);
+    slab2 = new Slab(1020,315,60,150);
 
-    slab3 = new Slab(800,220,710,30);
+    slab3 = new Slab(800,220,850,30);
 
-    slab4 = new Slab(540,20,40,150);
+    slab4 = new Slab(540,20,60,150);
     book3 = new Book(650,170,100,130);
     book4 = new Book(900,170,100,130);
-    slab5 = new Slab(1020,20,40,150);
+    slab5 = new Slab(1020,20,60,150);
 
-    slab6 = new Slab(800,5,710,30);
+    slab6 = new Slab(800,10,850,30);
 
-    enemy1 = new Enemy1(780,400,90,90);
-    enemy2 = new Enemy2(780,210,90,90);
+    enemy1 = new Enemy1(780,400);
+    enemy2 = new Enemy2(780,210);
+
+    enemy3 = new Enemy1(450,210);
+    enemy4 = new Enemy1(1100,210);
+
+    enemy5 = new Enemy2(450,400);
+    enemy6 = new Enemy2(1100,400);
 
     slingshot = new SlingShot(player.body,{x:230,y:200});
 }
@@ -86,7 +92,19 @@ function draw(){
     slab5.display();
 
     slab6.display();
-   
+
+    enemy3.display();
+    enemy3.score();
+
+    enemy4.display();
+    enemy4.score();
+
+    enemy5.display();
+    enemy5.score();
+
+    enemy6.display();
+    enemy6.score();
+
     getBackgroundImage();
 }
 
