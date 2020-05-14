@@ -20,7 +20,7 @@ class Enemy1 extends BaseClass{
     }
 
     score(){
-        if(this.visibility < 0 && this.visibility > -10){
+        if(this.visibility < 0 && this.visibility > -100){
             score++;
         }
     }

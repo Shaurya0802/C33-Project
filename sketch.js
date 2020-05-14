@@ -39,7 +39,8 @@ function setup(){
     book4 = new Book(900,170,100,130);
     slab5 = new Slab(1020,20,60,150);
 
-    slab6 = new Slab(800,10,850,30);
+    slab6 = new Slab(540,10,455,30);
+    slab7 = new Slab(1015,10,455,30);
 
     enemy1 = new Enemy1(780,400);
     enemy2 = new Enemy2(780,210);
@@ -92,6 +93,7 @@ function draw(){
     slab5.display();
 
     slab6.display();
+    slab7.display();
 
     enemy3.display();
     enemy3.score();
