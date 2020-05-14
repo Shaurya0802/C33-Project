@@ -14,7 +14,7 @@ var gameState = "onSling";
 var score = 0;
 
 function preload() {
-    backgroundImg;
+    getBackgroundImage();
 }
 
 function setup(){
